@@ -179,7 +179,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-between items-center">
           <LanguageSelector />
           <ThemeToggle />
         </div>

@@ -23,11 +23,12 @@ import {
 } from '@/components/ui/form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import LanguageSelector from '../languageSelector';
 import { useTranslations } from 'next-intl';
 import { loginAction } from '@/actions/auth';
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
+import { ThemeToggle } from '@/components/themeToggle';
+import LanguageSelector from '@/components/languageSelector';
 
 const FormLogin = () => {
   const t = useTranslations('Auth');
@@ -123,8 +124,9 @@ const FormLogin = () => {
           </Button>
         </CardFooter>
       </Card>
-      <div className="absolute bottom-0 left-0 p-4">
+      <div className="flex gap-2 absolute bottom-0 left-0 p-4">
         <LanguageSelector />
+        <ThemeToggle />
       </div>
     </div>
   );
