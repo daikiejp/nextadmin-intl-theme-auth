@@ -1,6 +1,6 @@
 {
   "name": "nextadmin-intl-theme-auth",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -48,5 +48,10 @@
     "prisma": "^5.22.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "react-hook-form": {
+      "react": "19.0.0-rc-66855b96-20241106"
+    }
   }
 }
