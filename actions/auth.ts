@@ -43,11 +43,17 @@ export const registerAction = async (
 
     const passwordHash = await bcrypt.hash(data.password, 10);
 
+    // Remove those two lines in production
+    // Also delete 'role' inside db.user.create() method.
+    const userCount = await db.user.count();
+    const role = userCount === 0 ? 'admin' : 'user';
+
     await db.user.create({
       data: {
         email: data.email,
         name: data.name,
         password: passwordHash,
+        role,
       },
     });
 
