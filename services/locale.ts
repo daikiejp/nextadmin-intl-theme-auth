@@ -1,8 +1,7 @@
 'use server';
 
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { Locale, defaultLocale } from '@/i18n/config';
-import { headers } from 'next/headers';
 
 const COOKIE_NAME = 'NEXT_LOCALE';
 
