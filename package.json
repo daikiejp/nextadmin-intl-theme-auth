@@ -51,7 +51,7 @@
   },
   "overrides": {
     "react-hook-form": {
-      "react": "19.0.0-rc-66855b96-20241106"
+      "react": "^19"
     }
   },
   "pnpm": {
