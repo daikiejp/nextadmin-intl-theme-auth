@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "title": "¡Hola Mundo!",
+    "desc1": "Empieza a editar",
+    "desc2": "Guarde y vea sus cambios al instante.",
+    "gotoDashboard": "Ir al panel de control",
+    "deployNow": "Despliegue ahora",
+    "readDocs": "Lea nuestra documentación",
+    "learn": "Aprenda",
+    "examples": "Ejemplos",
+    "gotoNextjs": "Ir a nextjs.org"
+  }
+}

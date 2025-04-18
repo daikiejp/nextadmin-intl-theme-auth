@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "desc1": "Get started by editing",
+    "desc2": "Save and see your changes instantly.",
+    "gotoDashboard": "Go to Dashboard",
+    "deployNow": "Deploy now",
+    "readDocs": "Read our docs",
+    "learn": "Learn",
+    "examples": "Examples",
+    "gotoNextjs": "Go to nextjs.org"
+  }
+}
