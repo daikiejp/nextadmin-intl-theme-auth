@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "title": "ハロー・ワールド",
+    "desc1": "このファイルを編集して始めよう：",
+    "desc2": "保存して、変更内容をすぐに確認できます。",
+    "gotoDashboard": "ダッシュボードへ",
+    "deployNow": "今すぐデプロイ",
+    "readDocs": "ドキュメント",
+    "learn": "学ぶ",
+    "examples": "例",
+    "gotoNextjs": "nextjs.orgへ"
+  }
+}
