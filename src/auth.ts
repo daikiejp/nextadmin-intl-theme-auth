@@ -10,13 +10,7 @@ function run(command: string) {
 function main() {
   const intlDir = path.join(__dirname, "..", "templates", "auth");
   const distDir = path.join(__dirname, "..", "dist", "base");
-  const gitignore = path.join(
-    __dirname,
-    "..",
-    "dist",
-    "base",
-    ".gitignore",
-  );
+  const gitignore = path.join(__dirname, "..", "dist", "base", ".gitignore");
   const packageJson = path.join(
     __dirname,
     "..",
@@ -51,6 +45,14 @@ prisma/generated/
   } else {
     console.log("ℹ️ Already exists #prisma en el .gitignore");
   }
+
+  fs.rename(gitignore, "gitignore", (err) => {
+    if (err) {
+      console.error("❌ Error while renaming:", err);
+    } else {
+      console.log("✅ gitignore Successfully renamed for Create NextAdmin");
+    }
+  });
 
   const pkg = JSON.parse(fs.readFileSync(packageJson, "utf-8"));
   pkg.scripts = pkg.scripts || {};

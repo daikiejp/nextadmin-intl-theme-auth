@@ -7,6 +7,7 @@
 
 ### Auth
 - Remove `dlx` to avoid install latest version instead package version in prisma
+- Rename to .gitignore to gitignore for Create Next Admin package
 
 ## 15.3.2
 
