@@ -2,6 +2,9 @@
 
 ## 15.5.3
 
+### Intl
+- Fix unknown language crash website
+
 ### Auth
 - Remove `dlx` to avoid install latest version instead package version in prisma
 
