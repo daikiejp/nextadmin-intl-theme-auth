@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 15.5.3
+
+### Auth
+- Remove `dlx` to avoid install latest version instead package version in prisma
+
 ## 15.3.2
 
 ### Patches

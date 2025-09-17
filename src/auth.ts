@@ -55,7 +55,7 @@ prisma/generated/
   const pkg = JSON.parse(fs.readFileSync(packageJson, "utf-8"));
   pkg.scripts = pkg.scripts || {};
   pkg.scripts.build =
-    "pnpm dlx prisma generate && pnpm dlx prisma db push && next build";
+    "pnpm prisma generate && pnpm prisma db push && next build";
   pkg.pnpm = pkg.pnpm || {};
   pkg.pnpm.onlyBuiltDependencies = [
     "@prisma/client",
