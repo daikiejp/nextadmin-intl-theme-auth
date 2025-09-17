@@ -1,58 +1,32 @@
 {
   "name": "nextadmin-intl-theme-auth",
-  "version": "0.1.0",
-  "private": true,
+  "version": "15.3.2",
+  "description": "NextJS Admin Dashboard ready to use",
+  "main": "dist/installer.js",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "pnpm dlx prisma generate && pnpm dlx prisma db push && next build",
-    "start": "next start",
-    "lint": "next lint"
+    "base": "ts-node src/base.ts",
+    "patches": "ts-node src/patches.ts",
+    "intl": "ts-node src/intl.ts",
+    "themes": "ts-node src/themes.ts",
+    "auth": "ts-node src/auth.ts",
+    "dashboard": "ts-node src/dashboard.ts",
+    "debugauth": "cd dist/base && ts-node ../../src/debug.ts",
+    "debugdashboard": "cd dist/dashboard && ts-node ../../src/debug.ts",
+    "build": "rm -rf dist && rm -rf templates/base/* && pnpm run base && pnpm run patches && pnpm run intl && pnpm run themes && pnpm run auth && pnpm run dashboard && pnpm run debugauth && pnpm run debugdashboard"
+  },
+  "keywords": [
+    "builder"
+  ],
+  "author": "Danny Davila (@daikiejp)",
+  "license": "MIT",
+  "packageManager": "pnpm@10.16.1",
+  "devDependencies": {
+    "@types/node": "^24.4.0",
+    "child_process": "^1.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@auth/prisma-adapter": "^2.9.1",
-    "@hookform/resolvers": "^5.0.1",
-    "@prisma/client": "^6.7.0",
-    "@radix-ui/react-dropdown-menu": "^2.1.14",
-    "@radix-ui/react-label": "^2.1.6",
-    "@radix-ui/react-select": "^2.2.4",
-    "@radix-ui/react-slot": "^1.2.2",
-    "bcryptjs": "^3.0.2",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.509.0",
-    "next": "15.3.2",
-    "next-auth": "5.0.0-beta.28",
-    "next-intl": "^4.1.0",
-    "next-themes": "^0.4.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.56.3",
-    "tailwind-merge": "^3.2.0",
-    "zod": "^3.24.4"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@next/eslint-plugin-next": "^15.3.2",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.2",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "prisma": "^6.7.0",
-    "tailwindcss": "^4",
-    "tw-animate-css": "^1.2.9",
-    "typescript": "^5"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@prisma/client",
-      "@prisma/engines",
-      "esbuild",
-      "prisma",
-      "sharp",
-      "unrs-resolver"
-    ]
+    "next-intl": "^4.3.9"
   }
 }
