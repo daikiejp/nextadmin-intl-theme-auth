@@ -3,7 +3,11 @@
 ## 15.5.3
 
 ### Intl
+- Language Selector for text color in list and default when Light and Dark mode 
 - Fix unknown language crash website
+
+### Themes
+- Theme Toggle background color for Light and Dark mode
 
 ### Auth
 - Remove `dlx` to avoid install latest version instead package version in prisma

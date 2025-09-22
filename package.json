@@ -12,7 +12,8 @@
     "dashboard": "ts-node src/dashboard.ts",
     "debugauth": "cd dist/base && ts-node ../../src/debug.ts",
     "debugdashboard": "cd dist/dashboard && ts-node ../../src/debug.ts",
-    "build": "rm -rf dist && rm -rf templates/base/* && pnpm run base && pnpm run patches && pnpm run intl && pnpm run themes && pnpm run auth && pnpm run dashboard && pnpm run debugauth && pnpm run debugdashboard"
+    "reset": "rm -rf dist && rm -rf templates/base && mkdir -p templates/base && touch templates/base/.keep",
+    "build": "pnpm run reset && pnpm run base && pnpm run patches && pnpm run intl && pnpm run themes && pnpm run auth && pnpm run dashboard && pnpm run debugauth && pnpm run debugdashboard"
   },
   "keywords": [
     "builder"
