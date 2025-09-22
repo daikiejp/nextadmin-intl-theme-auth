@@ -41,12 +41,12 @@ export default function LanguageSelector() {
 
   return (
     <Select onValueChange={handleSelectChange}>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-[180px] !text-black dark:!text-white">
         <SelectValue placeholder={currentLanguage.label} />
       </SelectTrigger>
       <SelectContent>
         {sortedLanguages.map((lang) => (
-          <SelectItem key={lang.code} value={lang.code}>
+          <SelectItem key={lang.code} value={lang.code} className="text-black dark:text-white">
             {lang.label}
           </SelectItem>
         ))}
